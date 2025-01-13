@@ -103,6 +103,14 @@ function Navbar() {
         </div>
         {isMenuOpen && (
           <div className="lg:hidden mt-4 space-y-4 text-center">
+          <div className="">
+             {!user ? <div>
+                  <NavLink to={'/login'} className="px-2 py-2 rounded bg-green-500 hover:bg-green-600 text-white">Login</NavLink>
+             </div> : <div>
+                  <button onClick={handleLogOut} className="px-2 py-2 rounded bg-red-500 hover:bg-red-600 text-white">LogOut</button>
+                 </div>}
+           </div> 
+          
             <form className="flex justify-center items-center space-x-2">
               <input
                 type="text"
